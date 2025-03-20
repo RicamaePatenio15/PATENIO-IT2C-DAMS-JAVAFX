@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dentalappointmentms;
 
 import config.Users;
@@ -163,13 +158,14 @@ public class FXMLDocumentController implements Initializable {
     }
 
 if (email.getText().trim().isEmpty() || pass.getText().trim().isEmpty()) {
+
 //    if (!status.equals("Active")) {
 //        alert.successMessage("The account is not yet Active. Please contact the administrator");
 //    } else {
         alert.successMessage("Login Successfully!");
         if (type.equals("Admin")) {
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("/admin/adminDashboard.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("user/adminDashboard.fxml"));
                 Stage stage = new Stage();
                 stage.setTitle("Admin Dashboard");
 
@@ -184,7 +180,7 @@ if (email.getText().trim().isEmpty() || pass.getText().trim().isEmpty()) {
             }
         } else if (type.equals("User")) {
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("/user/userDashboard.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("admin/userDashboard.fxml"));
                 Stage stage = new Stage();
                 stage.setTitle("User Dashboard");
 

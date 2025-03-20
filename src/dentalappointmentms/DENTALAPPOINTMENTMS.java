@@ -19,8 +19,11 @@ import javafx.stage.Stage;
 
         Scene scene = new Scene(root);
 
-        primaryStage.setMinWidth(340);
-        primaryStage.setMinHeight(580);
+        primaryStage.setMinWidth(380);
+        primaryStage.setMinHeight(530);
+        
+        primaryStage.setMaxWidth(380);
+        primaryStage.setMaxHeight(450);
 
         primaryStage.setTitle("Dental Appointment Management System");
 

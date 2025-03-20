@@ -1,26 +1,29 @@
-
 package config;
-
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.ResultSet;
 
 public class connectDB {
-    public Connection connect;
 
-       // constructor to connect to our database
-        public connectDB(){
-            try{
-                connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/patenio_db", "root", "");
-            }catch(SQLException ex){
-                    System.out.println("Can't connect to database: "+ex.getMessage());
-            }
-            
+    public static Connection connect;
+
+    // Constructor to connect to our database
+    public connectDB() {
+        try {
+            connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/patenio_db", "root", "");
+        } catch (SQLException ex) {
+            System.out.println("Can't connect to database: " + ex.getMessage());
         }
+    }
+
+    // Method to return the connection
+    public static Connection getConnection() {
+        return connect;
+    }
     
     //Function to save data
         public int insertData(String sql){
@@ -45,3 +48,5 @@ public class connectDB {
             return rst;
         }
 }
+
+

@@ -25,7 +25,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="login_username" layoutX="49.0" layoutY="193.0" onAction="#loginAccount" prefHeight="30.0" prefWidth="250.0" promptText="Email" stylesheets="@../design/pageDesign.css">
+                  <TextField fx:id="login_email" layoutX="49.0" layoutY="193.0" onAction="#loginAccount" prefHeight="30.0" prefWidth="250.0" promptText="Email" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
@@ -37,7 +37,7 @@
                         <String fx:value="white-bg" />
                      </styleClass>
                   </PasswordField>
-                  <TextField fx:id="login_textpass" layoutX="49.0" layoutY="240.0" prefHeight="24.0" prefWidth="250.0" promptText="Password" stylesheets="@../design/pageDesign.css" visible="false">
+                  <TextField fx:id="login_textpass" layoutX="49.0" layoutY="240.0" prefHeight="24.0" prefWidth="250.0" promptText="Password" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
@@ -49,7 +49,7 @@
                   <Hyperlink fx:id="login_register" layoutX="196.0" layoutY="404.0" onAction="#switchForm" prefHeight="24.0" prefWidth="85.0" text="Register here!" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="registerForm" layoutX="-1.0" layoutY="-2.0" prefHeight="500.0" prefWidth="367.0" styleClass="white-bg" stylesheets="@../design/pageDesign.css" visible="false">
+            <AnchorPane fx:id="registerForm" layoutX="-1.0" layoutY="-2.0" prefHeight="500.0" prefWidth="367.0" styleClass="white-bg" stylesheets="@../design/pageDesign.css">
                <children>
                   <FontAwesomeIcon fill="#006bb0" glyphName="USER_PLUS" layoutX="142.0" layoutY="110.0" size="7em" styleClass="textfield-1" text="" wrappingWidth="113.99999999999989" />
                   <Label layoutX="112.0" layoutY="122.0" text="Register Account">
@@ -84,11 +84,17 @@
                         <String fx:value="textfield-1" />
                         <String fx:value="radius" />
                      </styleClass></ComboBox>
-                  <PasswordField fx:id="pass" layoutX="28.0" layoutY="307.0" prefHeight="35.0" prefWidth="318.0" promptText="Password" styleClass="radius" stylesheets="@../design/pageDesign.css" />
-                  <TextField fx:id="pass_text" layoutX="29.0" layoutY="307.0" prefHeight="35.0" prefWidth="318.0" promptText="Password" stylesheets="@../design/pageDesign.css">
+                  <PasswordField fx:id="pass" layoutX="28.0" layoutY="303.0" prefHeight="35.0" prefWidth="318.0" promptText="Password" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
+                        <String fx:value="textfield-1" />
                         <String fx:value="radius" />
+                     </styleClass>
+                  </PasswordField>
+                  <TextField fx:id="pass_text" layoutX="29.0" layoutY="303.0" prefHeight="35.0" prefWidth="318.0" promptText="Password" stylesheets="@../design/pageDesign.css" visible="false">
+                     <styleClass>
+                        <String fx:value="textfield-1" />
+                        <String fx:value="white-bg" />
                      </styleClass>
                   </TextField>
                   <CheckBox fx:id="showpass_button" layoutX="39.0" layoutY="356.0" mnemonicParsing="false" onAction="#registerShowPassword" prefHeight="17.0" prefWidth="115.0" text="Show password" />
