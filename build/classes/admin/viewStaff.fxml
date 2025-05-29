@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" fx:id="ViewStaff_form" prefHeight="333.0" prefWidth="548.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="admin.ViewStaffController">
+   <children>
+      <Label layoutX="34.0" layoutY="30.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="View Staff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#006bb0" glyphName="EYE" layoutX="138.0" layoutY="55.0" size="2.5em" />
+      <Label layoutX="48.0" layoutY="100.0" text="First Name : " />
+      <Text fx:id="viewStaff_fname" layoutX="138.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.5367431640625" />
+      <Label layoutX="50.0" layoutY="156.0" text="Last Name :" />
+      <Text fx:id="viewStaff_lname" layoutX="138.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.5367431640625" />
+      <Label layoutX="82.0" layoutY="214.0" text="Email :" />
+      <Text fx:id="viewStaff_email" layoutX="138.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.5367431640625" />
+      <Label layoutX="34.0" layoutY="271.0" text="Phone Number : " />
+      <Text fx:id="viewStaff_phonenum" layoutX="153.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.5367431640625" />
+      <Label layoutX="314.0" layoutY="262.0" text="Type : " />
+      <Text fx:id="viewStaff_type" layoutX="363.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.5367431640625" />
+      <Label layoutX="311.0" layoutY="296.0" text="Status : " />
+      <Text fx:id="viewStaff_status" layoutX="373.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.5367431640625" />
+      <AnchorPane layoutX="314.0" layoutY="59.0" prefHeight="177.0" prefWidth="200.0" stylesheets="@../design/admindashboard.css">
+         <children>
+            <ImageView fx:id="viewStaff_imageView" fitHeight="178.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+      </AnchorPane>
+      <FontAwesomeIcon fx:id="close_viewform" fill="#ac1b1b" glyphName="CLOSE" layoutX="510.0" layoutY="36.0" size="1.5em" />
+   </children>
+</AnchorPane>

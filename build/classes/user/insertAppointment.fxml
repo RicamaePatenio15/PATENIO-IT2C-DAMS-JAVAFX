@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="339.0" prefWidth="804.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="user.InsertAppointmentController">
+   <children>
+      <Label layoutX="19.0" layoutY="28.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="Add Appointment">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#006bb0" glyphName="PLUS" layoutX="195.0" layoutY="53.0" size="2.5em" />
+      <Label layoutX="48.0" layoutY="90.0" text="Patient ID :" />
+      <ComboBox fx:id="appointment_PatientID" layoutX="126.0" layoutY="85.0" onAction="#handlePatientIDSelection" prefHeight="26.0" prefWidth="50.0" styleClass="textfield-2" stylesheets="@../design/userdashboard.css" />
+      <Label layoutX="64.0" layoutY="147.0" text="Name :" />
+      <Label fx:id="appointment_name" layoutX="125.0" layoutY="147.0" prefHeight="18.0" prefWidth="95.0" />
+      <Label layoutX="279.0" layoutY="87.0" text="Treatment :" />
+      <ComboBox fx:id="appointment_serviceAvail" layoutX="346.0" layoutY="83.0" prefHeight="26.0" prefWidth="177.0" promptText="Choose..." styleClass="textfield-2" stylesheets="@../design/userdashboard.css" />
+      <Label layoutX="556.0" layoutY="88.0" text="Notes :" />
+      <DatePicker fx:id="appointment_schedule" layoutX="341.0" layoutY="150.0" prefHeight="23.0" prefWidth="177.0" stylesheets="@../design/userdashboard.css">
+         <styleClass>
+            <String fx:value="textfield-2" />
+            <String fx:value="white-bg" />
+         </styleClass>
+      </DatePicker>
+      <Label layoutX="279.0" layoutY="153.0" text="Schedule:" />
+      <TextArea fx:id="appointment_notes" layoutX="604.0" layoutY="80.0" prefHeight="152.0" prefWidth="178.0" />
+      <Button fx:id="add_appointmentbtn" layoutX="137.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleInsertAppointmentButtonAction" prefHeight="37.0" prefWidth="166.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Insert Appointment" />
+      <Button fx:id="cancel_addbtn" layoutX="488.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="38.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Cancel" />
+   </children>
+</AnchorPane>

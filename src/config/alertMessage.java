@@ -6,12 +6,11 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 
 public class alertMessage {
-
     private Alert alert;
 
     public void errorMessage(String message) {
         alert = new Alert(AlertType.ERROR);
-        alert.setTitle("Error Messaage");
+        alert.setTitle("Error Message");
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
@@ -26,11 +25,11 @@ public class alertMessage {
     }
 
     public boolean confirmationMessage(String message) {
-
         alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Message");
         alert.setHeaderText(null);
         alert.setContentText(message);
+
         Optional<ButtonType> option = alert.showAndWait();
 
         if (option.get().equals(ButtonType.OK)) {
@@ -38,7 +37,5 @@ public class alertMessage {
         } else {
             return false;
         }
-
     }
-
 }

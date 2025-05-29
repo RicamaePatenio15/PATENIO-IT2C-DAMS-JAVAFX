@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.EditStaffController">
+   <children>
+      <FontAwesomeIcon fill="#006bb0" glyphName="EDIT" layoutX="235.0" layoutY="40.0" size="2.5em" text="" />
+      <Label layoutX="21.0" layoutY="15.0" prefWidth="202.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text=" Edit Staff Information">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="edit_fname" layoutX="155.0" layoutY="77.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="edit_phonenum" layoutX="155.0" layoutY="219.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="edit_lname" layoutX="155.0" layoutY="125.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="edit_email" layoutX="155.0" layoutY="171.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <ComboBox fx:id="edit_type" layoutX="155.0" layoutY="267.0" prefHeight="30.0" prefWidth="190.0" promptText="Choose" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" />
+      <ComboBox fx:id="edit_status" layoutX="458.0" layoutY="234.0" prefHeight="30.0" prefWidth="157.0" promptText="Choose" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" />
+      <Button fx:id="updatebutton" layoutX="223.0" layoutY="324.0" mnemonicParsing="false" onAction="#updateStaff" prefHeight="44.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Update" />
+      <Button fx:id="cancelButton" layoutX="376.0" layoutY="324.0" mnemonicParsing="false" onAction="#cancelEdit" prefHeight="44.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Cancel" />
+      <Label layoutX="71.0" layoutY="82.0" text="First Name : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="130.0" text="Last Name :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="176.0" text="Email :" AnchorPane.leftAnchor="102.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="224.0" text="Phone Number :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="272.0" text="Type :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="400.0" layoutY="239.0" text="Status :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="444.0" layoutY="28.0" prefHeight="146.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <ImageView fx:id="editStaff_imageView" fitHeight="146.0" fitWidth="190.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="editStaffImage_button" layoutX="484.0" layoutY="188.0" mnemonicParsing="false" onAction="#editStaffImage" prefHeight="30.0" prefWidth="112.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Import" />
+   </children>
+</AnchorPane>

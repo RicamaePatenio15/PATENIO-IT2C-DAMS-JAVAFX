@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dentalclinicsystem.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="381.0" prefWidth="290.0">
+         <children>
+            <AnchorPane fx:id="login_form" layoutX="7.0" prefHeight="567.0" prefWidth="385.0">
+               <children>
+                  <FontAwesomeIcon fill="#006bb0" glyphName="USER" layoutX="165.0" layoutY="150.0" size="7em" text="" wrappingWidth="70.76188468933105" />
+                  <Label layoutX="137.0" layoutY="162.0" text="Login Account">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login_email" layoutX="60.0" layoutY="205.0" prefHeight="30.0" prefWidth="282.0" promptText="Email" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </TextField>
+                  <PasswordField fx:id="login_pass" layoutX="60.0" layoutY="273.0" prefHeight="30.0" prefWidth="282.0" promptText="Password" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </PasswordField>
+                  <CheckBox fx:id="login_showpass" layoutX="60.0" layoutY="316.0" mnemonicParsing="false" onAction="#loginShowPassword" text="Show Password" />
+                  <Button fx:id="login_button" layoutX="157.0" layoutY="374.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="38.0" prefWidth="86.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Login" />
+                  <Label layoutX="143.0" layoutY="430.0" text="Have no account yet?" />
+                  <Hyperlink fx:id="login_reglink" layoutX="161.0" layoutY="448.0" onAction="#switchForm" text="Register here!">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Hyperlink>
+                  <TextField fx:id="login_textfield" layoutX="63.0" layoutY="277.0" onAction="#loginShowPassword" prefHeight="24.0" prefWidth="276.0" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" visible="false" />
+                  <FontAwesomeIcon fx:id="close" fill="#1e405c" glyphName="CLOSE" layoutX="349.0" layoutY="37.0" onMouseClicked="#handleCloseIconClick" size="1.5em" />
+                  <Hyperlink fx:id="forgotpassword" layoutX="246.0" layoutY="249.0" onAction="#verifyEmailForgotPass" text="forgot password?">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="registration_form" layoutX="12.0" layoutY="10.0" prefHeight="567.0" prefWidth="390.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#006bb0" glyphName="USER_PLUS" layoutX="150.0" layoutY="100.0" size="7em" />
+                  <Label layoutX="116.0" layoutY="112.0" text="Register Account">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="reg_fname" layoutX="21.0" layoutY="153.0" prefHeight="30.0" prefWidth="160.0" promptText="First Name" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield-1" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="reg_phonenum" layoutX="21.0" layoutY="195.0" prefHeight="30.0" prefWidth="160.0" promptText="Phone number" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield-1" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="reg_lname" layoutX="198.0" layoutY="153.0" prefHeight="30.0" prefWidth="160.0" promptText="Last Name" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="reg_email" layoutX="198.0" layoutY="195.0" prefHeight="30.0" prefWidth="160.0" promptText="Email" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield-1" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </TextField>
+                  <ComboBox fx:id="reg_type" layoutX="21.0" layoutY="242.0" onAction="#userList" prefHeight="30.0" prefWidth="338.0" promptText="Type " styleClass="textfield-1" stylesheets="@../design/pageDesign.css" />
+                  <PasswordField fx:id="reg_pass" layoutX="22.0" layoutY="389.0" prefHeight="30.0" prefWidth="338.0" promptText="Password" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="radius" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </PasswordField>
+                  <CheckBox fx:id="reg_showpass" layoutX="22.0" layoutY="433.0" mnemonicParsing="false" onAction="#registerShowPassword" text="Show Password" />
+                  <Button fx:id="register_button" layoutX="138.0" layoutY="463.0" mnemonicParsing="false" onAction="#registerAccount" prefHeight="37.0" prefWidth="106.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Register" />
+                  <Label layoutX="123.0" layoutY="511.0" text="Already have an account?" />
+                  <Hyperlink fx:id="reg_loginlink" layoutX="158.0" layoutY="529.0" onAction="#switchForm" text="Login here!">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Hyperlink>
+                  <TextField fx:id="reg_showpassfield" layoutX="24.0" layoutY="393.0" prefHeight="18.0" prefWidth="332.0" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" visible="false" />
+                  <ComboBox fx:id="ChooseSecQuest" layoutX="22.0" layoutY="311.0" prefHeight="30.0" prefWidth="338.0" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" />
+                  <TextField fx:id="securityquestionanswer" layoutX="22.0" layoutY="351.0" prefHeight="26.0" prefWidth="338.0" />
+                  <Label layoutX="22.0" layoutY="285.0" text=" Security Question">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

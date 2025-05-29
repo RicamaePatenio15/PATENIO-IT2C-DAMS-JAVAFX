@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="306.0" prefWidth="440.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="admin.AddServiceController">
+   <children>
+      <Button fx:id="add_servicebtn" layoutX="52.0" layoutY="228.0" mnemonicParsing="false" onAction="#addService" prefHeight="44.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Add" />
+      <Button fx:id="cancel_addbtn" layoutX="273.0" layoutY="228.0" mnemonicParsing="false" onAction="#cancelServiceAdd" prefHeight="44.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Cancel" />
+      <Label layoutX="48.0" layoutY="99.0" text="Service Name :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addservice_price" layoutX="164.0" layoutY="151.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <Label layoutX="102.0" layoutY="156.0" text="Price :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addservice_name" layoutX="164.0" layoutY="94.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <Label layoutX="34.0" layoutY="30.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="Add Service">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#006bb0" glyphName="PLUS" layoutX="156.0" layoutY="55.0" size="2.5em" />
+   </children>
+</AnchorPane>

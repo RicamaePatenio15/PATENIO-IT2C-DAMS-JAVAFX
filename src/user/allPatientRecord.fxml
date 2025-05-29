@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.AllPatientRecordController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="400.0" prefWidth="695.0">
+               <children>
+                  <Label layoutX="47.0" layoutY="15.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="PATIENTS RECORD">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="#006bb0" glyphName="USERS" glyphStyle="TASKS" layoutX="14.0" layoutY="42.0" size="2.5em" />
+                  <FontAwesomeIcon fx:id="back_icon" glyphName="REPLY" layoutX="657.0" layoutY="39.0" onMouseClicked="#handleBackIconClick" size="2em" />
+                  <TableView fx:id="allpatientRecord_TableView" layoutX="5.0" layoutY="62.0" prefHeight="326.0" prefWidth="680.0">
+                    <columns>
+                      <TableColumn fx:id="allpatientPID_Col" prefWidth="107.2000150680542" text="Patient ID" />
+                      <TableColumn fx:id="allpatientFirstName_Col" prefWidth="108.0" text="First Name" />
+                        <TableColumn fx:id="allpatientLastName_Col" prefWidth="142.0000762939453" text="Last Name" />
+                        <TableColumn fx:id="allpatientConNum_Col" prefWidth="137.3333740234375" text="Contact Number" />
+                        <TableColumn fx:id="allpatientAddress_Col" minWidth="0.0" prefWidth="89.99996948242188" text="Address" />
+                        <TableColumn fx:id="allpatientStatus_Col" prefWidth="75.0" text="Status" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

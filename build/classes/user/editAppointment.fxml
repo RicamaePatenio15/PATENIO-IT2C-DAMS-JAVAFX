@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="351.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.EditAppointmentController">
+   <children>
+      <Label layoutX="24.0" layoutY="107.0" text="Appointment ID :" />
+      <ComboBox fx:id="appointment_AppointmentID" layoutX="123.0" layoutY="103.0" prefHeight="26.0" prefWidth="25.0" styleClass="textfield-2" stylesheets="@../design/userdashboard.css" />
+      <Label layoutX="26.0" layoutY="163.0" text="Patient's Name :" />
+      <Label fx:id="editAppointmentPatientName" layoutX="122.0" layoutY="162.0" prefHeight="18.0" prefWidth="102.0" />
+      <Label layoutX="281.0" layoutY="106.0" text="Treatment :" />
+      <ComboBox fx:id="editappointment_serviceAvail" layoutX="348.0" layoutY="102.0" prefHeight="26.0" prefWidth="177.0" promptText="Choose..." styleClass="textfield-2" stylesheets="@../design/userdashboard.css" />
+      <Label layoutX="558.0" layoutY="107.0" text="Notes :" />
+      <DatePicker fx:id="editappointment_schedule" layoutX="346.0" layoutY="160.0" prefHeight="23.0" prefWidth="177.0" stylesheets="@../design/userdashboard.css">
+         <styleClass>
+            <String fx:value="textfield-2" />
+            <String fx:value="white-bg" />
+         </styleClass>
+      </DatePicker>
+      <Label layoutX="284.0" layoutY="163.0" text="Schedule:" />
+      <TextArea fx:id="editappointment_notes" layoutX="606.0" layoutY="99.0" prefHeight="152.0" prefWidth="178.0" />
+      <Label layoutX="292.0" layoutY="218.0" text="Status :" />
+      <ComboBox fx:id="editappointment_status" layoutX="349.0" layoutY="214.0" prefHeight="26.0" prefWidth="177.0" promptText="Choose..." styleClass="textfield-2" stylesheets="@../design/userdashboard.css" />
+      <Label layoutX="29.0" layoutY="38.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="Edit Appointment">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#006bb0" glyphName="PENCIL" layoutX="205.0" layoutY="63.0" size="2.5em" />
+      <Button fx:id="edit_appointmentbtn" layoutX="148.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleEditAppointmentBtnAction" prefHeight="37.0" prefWidth="166.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Update Appointment" />
+      <Button fx:id="cancel_addbtn" layoutX="499.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleCancelAddBtnAction" prefHeight="38.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Cancel" />
+   </children>
+</AnchorPane>

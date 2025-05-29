@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.Admin_activityLogController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="47.0" layoutY="15.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="ACTVITY LOG">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#006bb0" glyphName="TASKS" glyphStyle="TASKS" layoutX="14.0" layoutY="42.0" size="2.5em" />
+            <TableView fx:id="table_activitylog" layoutX="13.0" layoutY="57.0" prefHeight="333.0" prefWidth="577.0">
+              <columns>
+                <TableColumn fx:id="log_id" prefWidth="68.00003337860107" text="LogID" />
+                <TableColumn fx:id="user_id" prefWidth="73.99996185302734" text="UserID" />
+                  <TableColumn fx:id="log_date" prefWidth="138.66673278808594" text="LogDate" />
+                  <TableColumn fx:id="log_action" prefWidth="295.33330281575525" text="Log Action" />
+              </columns>
+            </TableView>
+            <FontAwesomeIcon fx:id="back_icon" glyphName="REPLY" layoutX="562.0" layoutY="38.0" onMouseClicked="#handleBackIconClick" size="2em" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

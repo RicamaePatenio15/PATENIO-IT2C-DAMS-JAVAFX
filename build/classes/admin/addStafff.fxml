@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AddStaffController">
+   <children>
+      <Label layoutX="24.0" layoutY="20.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="Add Staff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#006bb0" glyphName="USER_PLUS" layoutX="128.0" layoutY="45.0" size="2.5em" />
+      <Label layoutX="69.0" layoutY="90.0" text="First Name : " />
+      <Label layoutX="67.0" layoutY="137.0" text="Last Name :" />
+      <Label layoutX="96.0" layoutY="192.0" text="Email :" />
+      <Label layoutX="72.0" layoutY="240.0" text="Password : " />
+      <Label layoutX="37.0" layoutY="325.0" text="Phone Number : " />
+      <Label layoutX="386.0" layoutY="276.0" text="Type : " />
+      <Label layoutX="383.0" layoutY="325.0" text="Status : " />
+      <TextField fx:id="add_fname" layoutX="145.0" layoutY="84.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="add_lname" layoutX="145.0" layoutY="130.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="add_email" layoutX="145.0" layoutY="186.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <PasswordField fx:id="add_password" layoutX="145.0" layoutY="234.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="textfield-1" />
+         </styleClass>
+      </PasswordField>
+      <TextField fx:id="addStaff_textfield" layoutX="149.0" layoutY="237.0" onAction="#addShowPassword" prefHeight="24.0" prefWidth="182.0" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" visible="false" />
+      <TextField fx:id="add_phonenum" layoutX="145.0" layoutY="319.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </TextField>
+      <ComboBox fx:id="add_type" layoutX="434.0" layoutY="270.0" prefHeight="30.0" prefWidth="190.0" promptText="Choose" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" />
+      <AnchorPane layoutX="434.0" layoutY="40.0" prefHeight="146.0" prefWidth="190.0" stylesheets="@../design/admindashboard.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <ImageView fx:id="addStaff_imageView" fitHeight="146.0" fitWidth="190.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="addStaffImage_button" layoutX="474.0" layoutY="211.0" mnemonicParsing="false" onAction="#addStaffImage" prefHeight="30.0" prefWidth="112.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Import" />
+      <ComboBox fx:id="add_status" layoutX="434.0" layoutY="319.0" prefHeight="30.0" prefWidth="190.0" promptText="Choose" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" />
+      <Button fx:id="addButton" layoutX="182.0" layoutY="392.0" mnemonicParsing="false" onAction="#addButton" prefHeight="44.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Add" />
+      <Button fx:id="cancelButton" layoutX="376.0" layoutY="392.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="44.0" prefWidth="116.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Cancel" />
+      <CheckBox fx:id="add_showpassword" layoutX="145.0" layoutY="276.0" mnemonicParsing="false" onAction="#addShowPassword" text="Show Password" />
+   </children>
+</AnchorPane>

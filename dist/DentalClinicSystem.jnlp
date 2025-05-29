@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DentalClinicSystem.jnlp">
+  <information>
+    <title>DentalClinicSystem</title>
+    <vendor>laroa</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DentalClinicSystem.jar" size="154644" download="eager" />
+    <jar href="lib\fontawesomefx-8.2.jar" size="180341" download="eager" />
+    <jar href="lib\javafx.controls.jar" size="2551599" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\pdfbox-app-3.0.5.jar" size="13486369" download="eager" />
+    <jar href="lib\rs2xml.jar" size="171578" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DentalClinicSystem" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="dentalclinicsystem.DentalClinicSystem"  name="DentalClinicSystem" />
+  <update check="always"/>
+</jnlp>

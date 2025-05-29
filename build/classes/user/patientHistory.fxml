@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.PatientHistoryController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="9.0" layoutY="10.0" prefHeight="400.0" prefWidth="604.0">
+         <children>
+            <Label layoutX="48.0" layoutY="15.0" styleClass="header-1" stylesheets="@../design/admindashboard.css" text="INDIVIDUAL PATIENTS RECORD">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#006bb0" glyphName="USER" glyphStyle="TASKS" layoutX="15.0" layoutY="41.0" size="2.5em" />
+            <ComboBox fx:id="patientHistorySrchID" layoutX="118.0" layoutY="58.0" onAction="#handlePatientHistorySearchID" prefHeight="26.0" prefWidth="86.0" />
+            <Label layoutX="14.0" layoutY="62.0" text="Search Patient ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fx:id="back_icon" glyphName="REPLY" layoutX="549.0" layoutY="38.0" onMouseClicked="#handleCancelAddBtnAction" size="2em" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="PHistory" layoutX="21.0" layoutY="108.0" prefHeight="290.0" prefWidth="562.0">
+         <columns>
+            <TableColumn fx:id="firstNameCol" prefWidth="120.0" text="First Name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="127.99998474121094" text="Last Name" />
+            <TableColumn fx:id="serviceNameCol" prefWidth="171.2000732421875" text="Service" />
+            <TableColumn fx:id="dateCol" prefWidth="140.0" text="Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

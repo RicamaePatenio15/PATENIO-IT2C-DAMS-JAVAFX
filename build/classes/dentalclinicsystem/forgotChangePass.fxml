@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="302.0" prefWidth="459.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="dentalclinicsystem.ForgotChangePassController">
+   <children>
+      <Label layoutX="78.0" layoutY="87.0" text="New Password :" />
+      <PasswordField fx:id="createnewpass_newpass" layoutX="205.0" layoutY="82.0" prefHeight="26.0" prefWidth="222.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </PasswordField>
+      <TextField fx:id="createnewpass_newpass_text" layoutX="205.0" layoutY="83.0" prefHeight="26.0" prefWidth="222.0" visible="false" />
+      <CheckBox fx:id="show_newpass" layoutX="207.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleShowNewPassCheckBoxAction" prefHeight="18.0" prefWidth="137.0" text="Show" />
+      <Label layoutX="63.0" layoutY="159.0" text="Confirm Password :" />
+      <PasswordField fx:id="createnewpass_conpass" layoutX="205.0" layoutY="154.0" prefHeight="26.0" prefWidth="222.0" stylesheets="@../design/pageDesign.css">
+         <styleClass>
+            <String fx:value="textfield-1" />
+            <String fx:value="radius" />
+         </styleClass>
+      </PasswordField>
+      <TextField fx:id="createnewpass_connewpass_text" layoutX="205.0" layoutY="155.0" prefHeight="6.0" prefWidth="222.0" visible="false" />
+      <CheckBox fx:id="show_conpass" layoutX="207.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleShowConPassCheckBoxAction" prefHeight="18.0" prefWidth="137.0" text="Show" />
+      <Button fx:id="changepass_savebutton" layoutX="130.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefHeight="30.0" prefWidth="63.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Save " />
+      <Button fx:id="changepass_cancelbutton" layoutX="253.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="30.0" prefWidth="71.0" styleClass="btn-1" stylesheets="@../design/pageDesign.css" text="Cancel" />
+      <FontAwesomeIcon fill="#007bff" glyphName="KEY" layoutX="39.0" layoutY="55.0" size="2em" />
+      <Label layoutX="75.0" layoutY="32.0" text="Create New Password">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
